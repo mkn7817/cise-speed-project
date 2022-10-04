@@ -4,9 +4,13 @@
   "description": "��#\u0000 \u0000c\u0000i\u0000s\u0000e\u0000-\u0000s\u0000p\u0000e\u0000e\u0000d\u0000-\u0000p\u0000r\u0000o\u0000j\u0000e\u0000c\u0000t\u0000\r\u0000 \u0000",
   "main": "app.js",
   "scripts": {
+    "heroku-prebuild": "npm install -g serve",
     "start": "node app.js",
     "app": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client-install" : "cd frontend && npm install",
+    "client-build" : "cd frontend && npm run build",
+    "heroku-postbuild": " npm run client-install && npm run client-build"
   },
   "repository": {
     "type": "git",
@@ -22,6 +26,7 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.0",
     "config": "^3.3.8",
+    "dotenv": "^16.0.3",
     "express": "^4.18.1",
     "mongoose": "^6.6.4",
     "validation": "^0.0.1"
