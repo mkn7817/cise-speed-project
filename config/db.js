@@ -19,17 +19,6 @@ const connectDB = async () => {
     process.exit(1);
   }
 };
-/*
-mongoose
-  .connect(
-"mongodb+srv://vinnie18:mern_test@<cluster>/<database>?retryWrites=true&w=majority";
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
-  )
-  .then(() => console.log("MongoDB has been connected"))
-  .catch((err) => console.log(err));
-*/
+
 
 module.exports = connectDB;
