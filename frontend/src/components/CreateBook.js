@@ -86,6 +86,9 @@ class CreateBook extends React.Component {
               <Link to="/show-list" className="btn btn-outline-warning float-left">
                   Show Article List
               </Link>
+              <Link to="/search" className="btn btn-outline-warning float-right">
+                  Search For Article
+              </Link>
             </div>
             <div className="col-md-8 m-auto">
               <h1 className="display-4 text-center">Add Article</h1>
