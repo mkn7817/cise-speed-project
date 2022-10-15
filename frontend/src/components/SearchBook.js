@@ -78,12 +78,15 @@ class SearchBook extends  React.Component {
         console.log('test');
         return <li key={k}>Test</li>
       })
-      
+      var i = 1;
       //seach functioning
+      console.log('Number of books: '+books.length);
       books.forEach(function(item){
+        
         //console.log(item.title);
         if(item.title.includes(searchWord)) {
-          console.log('Search: '+searchWord+' title: '+item.title);
+          console.log('Search: '+searchWord+' item number: '+i+' title: '+item.title);
+          i++;
         }
         
       });
