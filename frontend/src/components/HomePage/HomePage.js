@@ -7,7 +7,7 @@ export const HomePage = () => {
 
   const navigateSearch = () => navigate("/search");
 
-  const navigateSubmit = () => navigate("/CreateBook.js");
+  const navigateSubmit = () => navigate("/Create-Article");
 
 
   const navigateModeratorPage = () => navigate("/moderator");
