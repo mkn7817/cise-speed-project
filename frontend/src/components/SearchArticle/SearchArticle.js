@@ -20,10 +20,13 @@ export const SearchArticle = () => {
   const [practice, setPractice] = useState("");
   const [claim, setClaim] = useState("");
   const [searchText, setSearchText] = useState("");
+  const articleList2 = [];
+
+
 
   useEffect(() => {
     const filterData = async () => {
-      let url = "/api/articles/filter?approvalStatus=Approved";
+      let url = "/api/books/filter?approvalStatus=Approved";
       if (searchText !== "") {
         url += "&title=" + searchText;
       }
@@ -60,9 +63,10 @@ export const SearchArticle = () => {
 
   const getData = async () => {
     await axios
-      .get("/api/articles")
+      .get("http://localhost:8082/api/books")
       .then((res) => {
         setArticleList(res.data);
+
       })
       .catch((err) => {
         console.log("error:" + err);
@@ -70,7 +74,7 @@ export const SearchArticle = () => {
   };
 
   const handleSearch = async () => {
-    let url = "/api/articles/filter?approvalStatus=Approved";
+    let url = "/api/books/filter?approvalStatus=Approved";
     if (searchText !== "") {
       url += "&title=" + searchText;
     }
@@ -303,6 +307,9 @@ export const SearchArticle = () => {
             disableColumnMenu
           />
         </Box>
+      </div>
+      <div>
+        <p>TEST PARAGRAPH{console.log('Search Text: '+searchText)}</p>
       </div>
     </body>
   );
