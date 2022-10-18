@@ -20,9 +20,7 @@ export const SearchArticle = () => {
   const [practice, setPractice] = useState("");
   const [claim, setClaim] = useState("");
   const [searchText, setSearchText] = useState("");
-  const articleList2 = [];
-
-
+  
 
   useEffect(() => {
     const filterData = async () => {
@@ -93,6 +91,124 @@ export const SearchArticle = () => {
         console.log("error:" + err);
       });
   };
+  var i = 0;  
+  const articleList2 = [];
+  //loop array for keyword search
+  articleList.forEach(function(item){
+    //TO DO adjust for ignoring case sensitivity
+
+    if(item.title.includes(searchText)) {
+      console.log('Search: '+searchText+' title: '+item.title);
+      articleList2.push(item);
+    }
+    
+    var isInArray = articleList2.indexOf(item) !== -1;
+    if(!isInArray && item.sepractice.includes(searchText)){
+      console.log('Search: '+searchText+' title: '+item.sepractice);
+      articleList2.push(item);
+      console.log(i+' is in array '+isInArray);
+      console.log('Length of articleList2: '+articleList2.length)
+    }
+
+    isInArray = articleList2.indexOf(item) !== -1;
+    if(!isInArray && item.claim.includes(searchText)){
+      console.log('Search: '+searchText+' title: '+item.claim);
+      articleList2.push(item);
+      console.log(i+' is in array '+isInArray);
+      console.log('Length of articleList2: '+articleList2.length)
+    }
+
+    isInArray = articleList2.indexOf(item) !== -1;
+    if(!isInArray && item.claim.includes(searchText)){
+      console.log('Search: '+searchText+' title: '+item.claim);
+      articleList2.push(item);
+      console.log(i+' is in array '+isInArray);
+      console.log('Length of articleList2: '+articleList2.length)
+    }
+
+    isInArray = articleList2.indexOf(item) !== -1;
+    if(!isInArray && item.result.includes(searchText)){
+      console.log('Search: '+searchText+' title: '+item.result);
+      articleList2.push(item);
+      console.log(i+' is in array '+isInArray);
+      console.log('Length of articleList2: '+articleList2.length)
+    }
+
+    isInArray = articleList2.indexOf(item) !== -1;
+    if(!isInArray && item.researchtype.includes(searchText)){
+      console.log('Search: '+searchText+' title: '+item.researchtype);
+      articleList2.push(item);
+      console.log(i+' is in array '+isInArray);
+      console.log('Length of articleList2: '+articleList2.length)
+    }
+
+    isInArray = articleList2.indexOf(item) !== -1;
+    if(!isInArray && item.participant.includes(searchText)){
+      console.log('Search: '+searchText+' title: '+item.participant);
+      articleList2.push(item);
+      console.log(i+' is in array '+isInArray);
+      console.log('Length of articleList2: '+articleList2.length)
+    }
+
+    isInArray = articleList2.indexOf(item) !== -1;
+    if(!isInArray && item.journalname.includes(searchText)){
+      console.log('Search: '+searchText+' title: '+item.journalname);
+      articleList2.push(item);
+      console.log(i+' is in array '+isInArray);
+      console.log('Length of articleList2: '+articleList2.length)
+    }
+
+    isInArray = articleList2.indexOf(item) !== -1;
+    if(!isInArray && item.authors.includes(searchText)){
+      console.log('Search: '+searchText+' title: '+item.authors);
+      articleList2.push(item);
+      console.log(i+' is in array '+isInArray);
+      console.log('Length of articleList2: '+articleList2.length)
+    }
+
+    isInArray = articleList2.indexOf(item) !== -1;
+    if(!isInArray && item.year.includes(searchText)){
+      console.log('Search: '+searchText+' title: '+item.year);
+      articleList2.push(item);
+      console.log(i+' is in array '+isInArray);
+      console.log('Length of articleList2: '+articleList2.length)
+    }
+
+    isInArray = articleList2.indexOf(item) !== -1;
+    if(!isInArray && item.volume.includes(searchText)){
+      console.log('Search: '+searchText+' title: '+item.volume);
+      articleList2.push(item);
+      console.log(i+' is in array '+isInArray);
+      console.log('Length of articleList2: '+articleList2.length)
+    }
+
+    isInArray = articleList2.indexOf(item) !== -1;
+    if(!isInArray && item.number.includes(searchText)){
+      console.log('Search: '+searchText+' title: '+item.number);
+      articleList2.push(item);
+      console.log(i+' is in array '+isInArray);
+      console.log('Length of articleList2: '+articleList2.length)
+    }
+
+    isInArray = articleList2.indexOf(item) !== -1;
+    if(!isInArray && item.pages.includes(searchText)){
+      console.log('Search: '+searchText+' title: '+item.pages);
+      articleList2.push(item);
+      console.log(i+' is in array '+isInArray);
+      console.log('Length of articleList2: '+articleList2.length)
+    }
+
+    isInArray = articleList2.indexOf(item) !== -1;
+    if(!isInArray && item.doi.includes(searchText)){
+      console.log('Search: '+searchText+' title: '+item.doi);
+      articleList2.push(item);
+      console.log(i+' is in array '+isInArray);
+      console.log('Length of articleList2: '+articleList2.length)
+    }
+
+    i++;
+  });
+  
 
   const columns = [
     { field: "id", headerName: "ID", hide: true },
@@ -186,8 +302,8 @@ export const SearchArticle = () => {
   ];
 
   const rows =
-    articleList.length > 0 &&
-    articleList.map((row) => ({
+    articleList2.length > 0 &&
+    articleList2.map((row) => ({
       id: row._id,
       title: row.title,
       sepractice: row.sepractice,
@@ -216,7 +332,16 @@ export const SearchArticle = () => {
     setClaim(e.target.value);
   };
 
+  //testing array
+  if(articleList.length !== 0){
+  //const articleList2 = [];
+  console.log('TEST: '+articleList[0].title);
+  }
+
+
+
   return (
+    
     <body>
       <button id="homeButton" onClick={navigateHome}>
         <h6 className="gradient-text">Home</h6>
@@ -309,7 +434,6 @@ export const SearchArticle = () => {
         </Box>
       </div>
       <div>
-        <p>TEST PARAGRAPH{console.log('Search Text: '+searchText)}</p>
       </div>
     </body>
   );
