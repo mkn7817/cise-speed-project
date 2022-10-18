@@ -1,0 +1,24 @@
+.title-text {
+    background: (green);
+    background-clip: text;
+    color: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20rem;
+  }
+  
+  .titleContainer {
+    background-color: white;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .buttonContainer {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
