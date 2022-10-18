@@ -91,7 +91,8 @@ class CreateBook extends React.Component {
               </Link>
             </div>
             <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Add Article</h1>
+              <h1 className="display-4 text-center"
+              >Add Article</h1>
               <p className="lead text-center">
                   Submit article entry
               </p>

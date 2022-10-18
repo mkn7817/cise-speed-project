@@ -56,7 +56,7 @@ export const SearchArticle = () => {
     navigate("/");
   };
   const navigateSubmit = () => {
-    navigate("/post");
+    navigate("/Create-Article");
   };
 
   const getData = async () => {
