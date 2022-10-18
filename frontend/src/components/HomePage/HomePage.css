@@ -1,14 +1,14 @@
 .title-text {
-    background: (4, 59, 92);
+    background: (green);
     background-clip: text;
-    color: transparent;
+    color: black;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 20rem;
   }
   
   .titleContainer {
-    background-color: #1e1e1e;
+    background-color: white;
     display: flex;
     min-height: 100vh;
     justify-content: center;

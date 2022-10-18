@@ -31,11 +31,11 @@ export const ModeratorPage = () => {
     navigate("/");
   };
   const navigateSubmit = () => {
-    navigate("/post");
+    navigate("/Create-Article");
   };
 
   const navigateSearch = () => {
-    navigate("/search");
+    navigate("/Search");
   };
 
   const handleSearch = async () => {
