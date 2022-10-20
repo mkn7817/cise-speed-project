@@ -50,7 +50,7 @@ class CreateBook extends React.Component {
     axios
       .post('http://localhost:8082/api/books', data)
       .then(res => {
-        console.log('1');
+        // console.log('1');
         this.setState({
           title: '',
           sepractice:'',
@@ -66,7 +66,7 @@ class CreateBook extends React.Component {
           pages:'',
           doi:''
         })
-        console.log('1');
+        // console.log('1');
         //this.props.history.push('/');
       })
       .catch(err => {
@@ -83,8 +83,8 @@ class CreateBook extends React.Component {
           <div className="row">
             <div className="col-md-8 m-auto">
               <br />
-              <Link to="/show-list" className="btn btn-outline-warning float-left">
-                  Show Article List
+              <Link to="/" className="btn btn-outline-warning float-left">
+                  Home
               </Link>
               <Link to="/search" className="btn btn-outline-warning float-right">
                   Search For Article
